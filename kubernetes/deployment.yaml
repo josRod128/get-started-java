@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: get-started-java
-        image: gcr.io/kuber-dav/get-started-java:v
+        image: gcr.io/kuber-dav/get-started-java:v1
         ports:
         - containerPort: 9080
         imagePullPolicy: Always
