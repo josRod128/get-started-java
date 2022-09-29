@@ -2,21 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: started-java
+  name: started-java-get
   labels:
-    app: started-java
+    app: started-java-get
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: started-java
+      app: started-java-get
   template:
     metadata:
       labels:
-        app: started-java
+        app: started-java-get
     spec:
       containers:
-      - name: started-java
+      - name: started-java-get
         image: gcr.io/started-java/started-java-get:v1
         ports:
         - containerPort: 9080
