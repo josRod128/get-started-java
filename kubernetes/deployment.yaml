@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: started-java-get
-        image: gcr.io/started-java/started-java-get:v1
+        image: gcr.io/java-364021/java-started
         ports:
         - containerPort: 9080
         imagePullPolicy: Always
