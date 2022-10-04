@@ -1,11 +1,11 @@
 FROM websphere-liberty:microProfile
 COPY server.xml /config/
+RUN mvn clean install
 ADD target/GetStartedJava.war /opt/ibm/wlp/usr/servers/defaultServer/dropins/
 ENV LICENSE accept
-ENV PORT 9080
+EXPOSE 9080
 
 ## Running the container locally
-# mvn clean install
 # docker build -t getstartedjava:latest .
 # docker run -d --name myjavacontainer getstartedjava
 # docker run -p 9080:9080 --name myjavacontainer getstartedjava
