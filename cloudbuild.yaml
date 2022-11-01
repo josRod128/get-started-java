@@ -13,7 +13,7 @@ steps:
     - run
     - --filename=kubernetes/deployment.yaml
     - --image=us-south1-docker.pkg.dev/java-time-kuber/cicd/get-java-started
-    - --location=us-south1
+    - --location=us-central1
     - --cluster=autopilot-cluster-1
 # images:
 #   - ${_CONTAINER_IMAGE_NAME}
