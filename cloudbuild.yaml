@@ -12,8 +12,8 @@ steps:
     args:
     - run
     - --filename=kubernetes/deployment.yaml
-    - --us-south1-docker.pkg.dev/java-time-kuber/cicd/get-java-started
-    - --location=us-south1 (Dallas)
+    - --image=us-south1-docker.pkg.dev/java-time-kuber/cicd/get-java-started
+    - --location=us-south1
     - --cluster=autopilot-cluster-1
 # images:
 #   - ${_CONTAINER_IMAGE_NAME}
