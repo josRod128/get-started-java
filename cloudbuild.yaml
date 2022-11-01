@@ -15,8 +15,8 @@ steps:
     - --us-south1-docker.pkg.dev/java-time-kuber/cicd/get-java-started
     - --location=us-south1
     - --cluster=autopilot-cluster-1
-images:
-  - ${_CONTAINER_IMAGE_NAME}
+# images:
+#   - ${_CONTAINER_IMAGE_NAME}
 
   # kubectl create -f kubernetes/deployment.yaml
   # kubectl expose deployment java-time-kuber --type LoadBalancer --port 9080 --target-port 9080
