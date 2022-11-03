@@ -3,20 +3,15 @@ steps:
     entrypoint: mvn
     args: ['clean','install']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'us-south1-docker.pkg.dev/java-time-kuber/cicd/get-java-started', '.']
+    args: ['build', '-t', 'us-south1-docker.pkg.dev/java-cicd/javastarted/get-java-started', '.']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'us-south1-docker.pkg.dev/java-time-kuber/cicd/get-java-started']
+    args: ['push', 'us-south1-docker.pkg.dev/java-cicd/javastarted/get-java-started']
     timeout: 500s
   # deploy container image to GKE
   - name: "gcr.io/cloud-builders/gke-deploy"
     args:
     - run
     - --filename=kubernetes/deployment.yaml
-    - --image=us-south1-docker.pkg.dev/java-time-kuber/cicd/get-java-started
+    - --image=us-south1-docker.pkg.dev/java-cicd/javastarted/get-java-started
     - --location=us-central1
     - --cluster=autopilot-cluster-1
-# images:
-#   - ${_CONTAINER_IMAGE_NAME}
-
-  # kubectl create -f kubernetes/deployment.yaml
-  # kubectl expose deployment java-time-kuber --type LoadBalancer --port 9080 --target-port 9080

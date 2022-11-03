@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: started-java-get
-        image: us-south1-docker.pkg.dev/java-time-kuber/cicd/get-java-started
+        image: us-south1-docker.pkg.dev/java-cicd/javastarted/get-java-started
         ports:
         - containerPort: 9080
         imagePullPolicy: Always
