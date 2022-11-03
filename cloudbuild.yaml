@@ -14,4 +14,4 @@ steps:
     - --filename=kubernetes/deployment.yaml
     - --image=us-south1-docker.pkg.dev/java-cicd/javastarted/get-java-started
     - --location=us-central1
-    - --cluster=autopilot-cluster-1
+    - --cluster=java-started
