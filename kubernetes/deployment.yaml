@@ -35,14 +35,14 @@ metadata:
   name: "get-started-service"
   namespace: "default"
   labels:
-    app: "java-started"
+    app: "started-java"
 spec:
   ports:
     - protocol: "TCP"
       port: 80
       targetPort: 9080
   selector:
-    app: "java-started"
+    app: "started-java"
   type: "LoadBalancer"
 
 
