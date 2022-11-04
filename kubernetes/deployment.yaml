@@ -28,21 +28,21 @@ spec:
               name: cloudant
               key: url
               optional: true
-# ---
-# apiVersion: "v1"
-# kind: "Service"
-# metadata:
-#   name: "getStartedService"
-#   namespace: "default"
-#   labels:
-#     app: "started-java"
-# spec:
-#   ports:
-#     - protocol: "TCP"
-#       port: 80
-#       targetPort: 9080
-#   selector:
-#     app: "started-java"
-#   type: "LoadBalancer"
+---
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  name: "getStartedService"
+  namespace: "default"
+  labels:
+    app: "started-java"
+spec:
+  ports:
+    - protocol: "TCP"
+      port: 80
+      targetPort: 9080
+  selector:
+    app: "started-java"
+  type: "LoadBalancer"
 
 
