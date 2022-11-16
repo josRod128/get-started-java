@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: started-java-get
-        image: us-south1-docker.pkg.dev/nmp-java-prueba/javastarted/get-java-started
+        image: us-south1-docker.pkg.dev/nmp-java/javastarted/get-java-started
         ports:
         - containerPort: 9080
         imagePullPolicy: Always
