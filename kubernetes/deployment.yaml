@@ -38,7 +38,7 @@ metadata:
     app: "started-java"
 spec:
   ports:
-    - protocol: "TCP"
+    - protocol: "HTTPS"
       port: 80
       targetPort: 9080
   selector:
