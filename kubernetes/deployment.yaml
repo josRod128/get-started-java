@@ -46,6 +46,6 @@ spec:
       targetPort: 9080
   selector:
     app: "started-java"
-  type: ClusterIP
+  type: NodePort
 
 
