@@ -37,7 +37,7 @@ metadata:
   labels:
     app: "started-java"
   annotations:
-    cloud.google.com/neg: '{"ingress": true}'
+    cloud.google.com/neg: '{"exposed_ports": {"80":{}}}'
 spec:
   ports:
     - name: https
@@ -46,6 +46,6 @@ spec:
       targetPort: 9080
   selector:
     app: "started-java"
-  type: "LoadBalancer"
+  type: "ClusterIP"
 
 
