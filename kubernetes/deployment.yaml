@@ -54,7 +54,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: metrics
+    app: started-java
     department: sales
   ports:
   - name: my-https-port
