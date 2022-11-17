@@ -44,3 +44,9 @@ spec:
       port:
         number: 9080
 ---
+apiVersion: compute.cnrm.cloud.google.com/v1beta1
+kind: ComputeAddress
+metadata:
+  name: web-static-ip
+spec:
+  location: global
