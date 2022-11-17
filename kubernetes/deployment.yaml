@@ -50,17 +50,3 @@ metadata:
   name: web-static-ip
 spec:
   location: global
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: basic-ingress2
-  annotations:
-    kubernetes.io/ingress.global-static-ip-name: "web-static-ip"
-spec:
-  defaultBackend:
-    service:
-      name: web
-      port:
-        number: 9080
----
