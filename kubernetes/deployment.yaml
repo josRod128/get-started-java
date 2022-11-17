@@ -44,9 +44,16 @@ spec:
       port:
         number: 9080
 ---
-apiVersion: compute.cnrm.cloud.google.com/v1beta1
-kind: ComputeAddress
+apiVersion: networking.k8s.io/v1
+kind: Ingress
 metadata:
-  name: web-static-ip
+  name: basic-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: "web-static-ip"
 spec:
-  location: global
+  defaultBackend:
+    service:
+      name: web
+      port:
+        number: 9080
+---
